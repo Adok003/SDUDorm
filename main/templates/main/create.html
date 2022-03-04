@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+{% block title %}
+Apply for
+{% endblock %}
+
+{% block content %}
+    <h1>Apply for dormitory</h1>
+    <br>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.first_name }} <br>
+        {{ form.last_name }} <br>
+        {{ form.email }} <br>
+        <label>Gender:</label>
+        {{ form.gender}} <br> <br>
+        <label>Course:</label>
+        {{ form.course }} <br> <br>
+        <label>Faculty:</label>
+        {{ form.faculty }} <br> <br>
+
+
+        <button type="submit" class="btn btn-success">Submit</button>
+        <span>{{ success }}</span>
+        <span>{{ error }}</span>
+        </form>
+{% endblock %}
