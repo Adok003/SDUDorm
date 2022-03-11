@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Req
+from .models import User
 from .forms import ReqForm
 
 
@@ -29,7 +29,3 @@ def create(request):
     form = ReqForm()
     context = {'form': form, 'error': error}
     return render(request, 'main/create.html', context)
-
-
-
-
