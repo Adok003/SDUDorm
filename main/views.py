@@ -29,3 +29,11 @@ def create(request):
     form = ReqForm()
     context = {'form': form, 'error': error}
     return render(request, 'main/create.html', context)
+
+
+def register(request):
+    return render(request, 'main/registration.html')
+
+
+def login(request):
+    return render(request, 'main/login.html')
