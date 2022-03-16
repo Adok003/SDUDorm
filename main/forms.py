@@ -1,10 +1,10 @@
-from .models import Req
+from .models import User
 from django.forms import *
 
 
-class ReqForm(ModelForm):
+class UserForm(ModelForm):
     class Meta:
-        model = Req
+        model = User
         fields = ["first_name", "last_name", "email", "gender", "course", "faculty"]
         widgets = {"first_name": TextInput(attrs={
                     'class': 'form-control',

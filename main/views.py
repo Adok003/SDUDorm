@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Req
-from .forms import ReqForm
+from .models import User
+from .forms import UserForm
 
 
 def index(request):
@@ -19,17 +19,18 @@ def successfully(request):
 def registration(request):
     return render(request, "main/registration.html")
 
+
 def create(request):
     error = ''
     if request.method == 'POST':
-        form = ReqForm(request.POST)
+        form = UserForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('successfully')
         else:
             error = "Invalid!"
 
-    form = ReqForm()
+    form = UserForm()
     context = {'form': form, 'error': error}
     return render(request, 'main/create.html', context)
 
