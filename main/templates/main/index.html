@@ -1,0 +1,105 @@
+{% extends 'main/base.html' %}
+{% block title %}
+Main page
+{% endblock %}
+{% block button %}
+<div class="row align-items-center">
+    <div class="col">
+        <button style="margin-top: 40px;" class="btn btn-danger rounded-pill" type="button">Booking now</button>
+    </div>
+</div>
+{% endblock %}
+{% block name %}SDU Dormitory{% endblock %}
+{% block active1 %}class="nav-link active"{% endblock %}
+{% block active2 %}class="nav-link"{% endblock %}
+{% block active3 %}class="nav-link"{% endblock %}
+{% block style %}style="background: rgb(58, 96, 139); height: 700px;"{% endblock %}
+{% block top %}style="margin-top=200px;font-size: 60px;color: #fff;"{% endblock %}
+{% block content %}
+<div class="container rooms" id="rooms" style="margin-top: 100px;">
+        <div class="row">
+          <div class="col">
+            <h1 class="text-center">Rooms</h1>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate adipisci eligendi nam iste voluptas quibusdam accusamus ut aliquam obcaecati, et omnis autem quo rerum fugit dolorum aliquid? Ipsa, autem culpa.</p>
+          </div>
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Chilling room</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Canteen</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Gym</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Cinema room</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Studying room</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Activity room</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-around">
+            <div class="card" style="width: 30rem;">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="col">
+                  <h5 class="card-title text-center">Boys room</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-danger rounded-pill">Booking now</a>
+                </div>
+              </div>
+            </div>
+            <div class="card" style="width: 30rem;">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="col">
+                  <h5 class="card-title text-center">Girls room</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-danger rounded-pill">Booking now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+{% endblock %}
