@@ -2,7 +2,10 @@
 {% block title %}
 Login
 {% endblock %}
-
+{% block active1 %}class="nav-link"{% endblock %}
+{% block active2 %}class="nav-link"{% endblock %}
+{% block active3 %}class="nav-link"{% endblock %}
+{% block style %}style="background: rgb(58, 96, 139); height: 350px;"{% endblock %}
 {% block content %}
     <div class="container">
         <main class="form-signin">
@@ -17,14 +20,7 @@ Login
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
                 <label for="floatingPassword">Password</label>
               </div>
-
-              <div class="checkbox mb-3">
-                <label>
-                  <input type="checkbox" value="remember-me"> Remember me
-                </label>
-              </div>
               <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-              <p class="mt-5 mb-3 text-muted">© 2017–2021</p>
             </form>
           </main>
     </div>

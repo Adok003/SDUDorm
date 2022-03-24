@@ -31,7 +31,7 @@ def create(request):
     return render(request, 'main/create.html', context)
 
 
-def register(request):
+def registration(request):
     return render(request, 'main/registration.html')
 
 

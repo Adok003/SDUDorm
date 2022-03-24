@@ -1,26 +1,94 @@
 {% extends 'main/base.html' %}
 {% block title %}
-Apply for
+Booking
 {% endblock %}
-
+{% block name %}Booking{% endblock %}
+{% block active1 %}class="nav-link"{% endblock %}
+{% block active2 %}class="nav-link"{% endblock %}
+{% block active3 %}class="nav-link active"{% endblock %}
+{% block style %}style="background: rgb(58, 96, 139); height: 350px;"{% endblock %}
+{% block top %}style="margin-top=100px;font-size: 60px;color: #fff;"{% endblock %}
 {% block content %}
-    <h1>Apply for dormitory</h1>
-    <br>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.first_name }} <br>
-        {{ form.last_name }} <br>
-        {{ form.email }} <br>
-        <label>Gender:</label>
-        {{ form.gender}} <br> <br>
-        <label>Course:</label>
-        {{ form.course }} <br> <br>
-        <label>Faculty:</label>
-        {{ form.faculty }} <br> <br>
+    <div class="container-book container">
+        <div class="row">
+            <div class="col-8">
+                <div class="card mb-3 bg-light rounded-3" style="max-width: 840px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="../../img/images.svg" class="img-fluid rounded-start " alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <form method="post">
+                                    {% csrf_token %}
+                                    <h5 class="card-title text-center">Room</h5>
+                                    <div class="input-group mb-3">
+                                        {{ form.first_name }} <br>
+    <!--                                    <input type="text" class="form-control" placeholder="First name" aria-describedby="basic-addon1">-->
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        {{ form.last_name }} <br>
+    <!--                                <input type="text" class="form-control" placeholder="Last name" aria-describedby="basic-addon1">-->
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        {{ form.email }} <br>
+    <!--                                    <input type="text" class="form-control" placeholder="Your email" aria-describedby="basic-addon1">-->
+                                    </div>
+                                    <label>Choose your gender:</label>
+                                    {{ form.gender}} <br> <br>
+    <!--                                <select class="form-select form-select-md mb-3"-->
+    <!--                                    aria-label=".form-select-md example">-->
+    <!--                                    <option selected>Choose your gender</option>-->
+    <!--                                    <option value="1">Male</option>-->
+    <!--                                    <option value="2">Female</option>-->
+    <!--                                </select>-->
+                                    <label>Choose your course year:</label>
+                                    {{ form.course }} <br> <br>
+    <!--                                <select class="form-select form-select-md mb-3"-->
+    <!--                                    aria-label=".form-select-md example">-->
+    <!--                                    <option selected>Choose your course year</option>-->
+    <!--                                    <option value="1">1</option>-->
+    <!--                                    <option value="2">2</option>-->
+    <!--                                    <option value="3">3</option>-->
+    <!--                                    <option value="4">4</option>-->
+    <!--                                </select>-->
+                                    <label>Choose your faculty:</label>
+                                    {{ form.faculty }} <br> <br>
+    <!--                                <select class="form-select form-select-md mb-3"-->
+    <!--                                    aria-label=".form-select-md example">-->
+    <!--                                    <option selected>Choose your faculty</option>-->
+    <!--                                    <option value="1">Law and Social Sciences</option>-->
+    <!--                                    <option value="2">Education and Humanities Sciences</option>-->
+    <!--                                    <option value="3">Engineering and Natural Sciences</option>-->
+    <!--                                    <option value="4">Business school</option>-->
+    <!--                                </select>-->
+                                    <button class="btn btn-danger rounded-pill" type="submit">Book now</button>
+                                    <span>{{ success }}</span>
+                                    <span>{{ error }}</span>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--    <form method="post">-->
+<!--        {% csrf_token %}-->
+<!--        {{ form.first_name }} <br>-->
+<!--        {{ form.last_name }} <br>-->
+<!--        {{ form.email }} <br>-->
+<!--        <label>Gender:</label>-->
+<!--        {{ form.gender}} <br> <br>-->
+<!--        <label>Course:</label>-->
+<!--        {{ form.course }} <br> <br>-->
+<!--        <label>Faculty:</label>-->
+<!--        {{ form.faculty }} <br> <br>-->
 
 
-        <button type="submit" class="btn btn-success">Submit</button>
-        <span>{{ success }}</span>
-        <span>{{ error }}</span>
-        </form>
+<!--        <button type="submit" class="btn btn-success">Submit</button>-->
+<!--        <span>{{ success }}</span>-->
+<!--        <span>{{ error }}</span>-->
+<!--        </form>-->
 {% endblock %}

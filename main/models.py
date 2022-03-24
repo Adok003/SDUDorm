@@ -55,6 +55,7 @@ class Room(models.Model):
     room_number = models.IntegerField('Room number')
     faculty = models.CharField('Faculty', default='None', max_length=50, choices=FACULTY)
     course = models.IntegerField('Course', choices=COURSE)
+    room_info = models.CharField('Type', max_length=10)
 
     def __str__(self):
         return str(self.floor_number) + ' ' + str(self.room_number) + ' room'
