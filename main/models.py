@@ -28,7 +28,11 @@ class User(models.Model):
     room = models.CharField('Room', max_length=50, default=None, blank=True, null=True)
 
     def __str__(self):
+<<<<<<< HEAD
         return self.first_name + self.first_name + str(self.course) + ' course'
+=======
+        return self.first_name
+>>>>>>> a5e58c4b5ccea2fb0db983f5fdaee035bbadb3e6
 
 
 class Block(models.Model):
@@ -55,7 +59,10 @@ class Room(models.Model):
     room_number = models.IntegerField('Room number')
     faculty = models.CharField('Faculty', default='None', max_length=50, choices=FACULTY)
     course = models.IntegerField('Course', choices=COURSE)
+<<<<<<< HEAD
     room_info = models.CharField('Type', max_length=10)
+=======
+>>>>>>> a5e58c4b5ccea2fb0db983f5fdaee035bbadb3e6
 
     def __str__(self):
         return str(self.floor_number) + ' ' + str(self.room_number) + ' room'
