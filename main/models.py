@@ -1,9 +1,17 @@
 from django.db import models
+import datetime
+
 
 GENDER = [
     ('m', 'Male'),
     ('f', 'Female')
 ]
+
+TYPE = [
+    ('Log In', 'Log In'),
+    ('Log Out', 'Log Out')
+]
+
 COURSE = [
     (1, 1),
     (2, 2),
@@ -19,16 +27,17 @@ FACULTY = [
 
 
 class User(models.Model):
+    student_id = models.IntegerField('Student ID', default = 0,null = False)
     first_name = models.CharField('First name', max_length=50)
     last_name = models.CharField('Last name', max_length=50)
     email = models.EmailField('E-mail', max_length=50)
     gender = models.CharField('Gender', max_length=2, choices=GENDER)
     course = models.IntegerField('Course', choices=COURSE)
     faculty = models.CharField('Faculty', max_length=60, choices=FACULTY)
-    room = models.CharField('Room', max_length=50, default=None, blank=True, null=True)
+    room = models.ForeignKey('Room', on_delete=models.CASCADE, null=True)
 
     def __str__(self):
-        return self.first_name + self.first_name + str(self.course) + ' course'
+        return self.last_name + ' ' + self.first_name + ' ' + str(self.course) + ' course'
 
 class Block(models.Model):
     block_name = models.CharField('Block name', max_length=50)
@@ -54,10 +63,18 @@ class Room(models.Model):
     room_number = models.IntegerField('Room number')
     faculty = models.CharField('Faculty', default='None', max_length=50, choices=FACULTY)
     course = models.IntegerField('Course', choices=COURSE)
-    room_info = models.CharField('Type', max_length=10)
+    room_info = models.CharField('Room info', max_length=100)
 
     def __str__(self):
         return str(self.floor_number) + ' ' + str(self.room_number) + ' room'
 
     class Meta:
         ordering = ('room_number', )
+
+class Entry(models.Model):
+    student_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    type = models.CharField('Type Of Entry', default='None', max_length=60, choices=TYPE)
+    date = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.student_id.last_name + ' ' + self.student_id.first_name + ' ' + self.type + ' ' + str(self.date)

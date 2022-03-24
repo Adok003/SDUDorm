@@ -5,11 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc0029c0-a8f7-4c94-a1f9-aaeb6443a379" name="Changes" comment="init">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dorm/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/dorm/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0002_room_course_room_faculty.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0003_alter_room_course.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0004_alter_room_course.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0005_user_room.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0006_alter_user_email.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0007_alter_room_options.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0008_alter_room_room_number.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0009_alter_floor_options_alter_floor_floor_number.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0010_room_room_info.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1646991569788</updated>
-      <workItem from="1648142114993" duration="2010000" />
+      <workItem from="1648142114993" duration="10590000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1647258088308</created>
